@@ -1,0 +1,55 @@
+        -:    0:Source:Box.cpp
+        -:    0:Graph:Box.gcno
+        -:    0:Data:Box.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "Box.h"
+        -:    3:
+        -:    4:// default constructor
+        1:    5:Box::Box(): 
+        1:    6:    m_length(1), m_breadth(1), m_height(1) {}
+        -:    7:
+        -:    8:// constructor for cuboid
+        1:    9:Box::Box(int l, int b, int h): 
+        1:   10:    m_length(l), m_breadth(b), m_height(h) {}
+        -:   11:
+        -:   12:// constructor for cube
+        1:   13:Box::Box(int s):
+        1:   14:    m_length(s), m_breadth(s), m_height(s) {}
+        -:   15:
+        -:   16:// copy constructor
+    #####:   17:Box::Box(const Box &ref):
+    #####:   18:    m_length(ref.m_length), 
+    #####:   19:    m_breadth(ref.m_breadth), 
+    #####:   20:    m_height(ref.m_height) {}
+        -:   21:
+        -:   22:// returns length of the box
+        3:   23:int Box::length() const{
+        3:   24:    return m_length;
+        3:   24-block  0
+        -:   25:}
+        -:   26:
+        -:   27:// returns breadth of the box
+        3:   28:int Box::breadth() const{
+        3:   29:    return m_breadth;
+        3:   29-block  0
+        -:   30:}
+        -:   31:
+        -:   32:// returns height of the box
+        3:   33:int Box::height() const{
+        3:   34:    return m_height;
+        3:   34-block  0
+        -:   35:}
+        -:   36:
+        -:   37:// returns volume of the box
+        3:   38:int Box::volume() const{
+        3:   39:    return m_length * m_breadth * m_height;
+        3:   39-block  0
+        -:   40:}
+        -:   41:
+    #####:   42:void Box::display() const{
+    #####:   43:    std::cout << "Length = " << m_length << std::endl;
+    %%%%%:   43-block  0
+    #####:   44:    std::cout << "Breadth = " << m_breadth << std::endl;
+    #####:   45:    std::cout << "Height = " << m_height << std::endl;
+    #####:   46:}
